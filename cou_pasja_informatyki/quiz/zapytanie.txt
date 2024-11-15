@@ -1,0 +1,12 @@
+#SELECT * FROM pytania # wybierz wszystko z bazy, gwiazdka znaczy wszystko
+#SELECT tresc,odpa,odpb,odpc,odpd FROM pytania # wybierz kolumny tresc, odpa, odpb, odpc, odpd z tabeli pytania
+#SELECT * FROM pytania WHERE id = 15 # wybierz wszystko z tabeli pytania gdzie id = 15 # wybierz wszystko
+#SELECT * FROM pytania WHERE answer = 'a' # wybierz wszystko z tab. pytania gdzie answer = 'a'
+#SELECT * FROM pytania WHERE rok = 2007 # wyb. all z tab. pytania gdzie rok = 2007
+#SELECT * FROM pytania WHERE kategoria = 'programowanie' AND rok = 2009 # wyb. all z tab. pytania gdzie kategoria = 'programowanie' i rok=2009
+#SELECT tresc, odpa, odpb, odpc, odpd FROM pytania WHERE rok=2010 # wyb. wymienione z tab. pyt. gdzie rok=2010
+#SELECT * FROM pytania ORDER BY tresc ASC # wyb. all z tab. pyt. i sortuj alfabetycznie wed. treści
+#SELECT tresc,id FROM pytania WHERE id BETWEEN 10 AND 12 # albo WHERE id => 10 AND id <= 12 wyb. all z tab. pyt. gdzie id między 10 i 12
+#SELECT * FROM pytania WHERE tresc LIKE 'Jak%' # wyb. all z tab. pyt. gdzie tresc zaczyna sie od "Jak" (procent to dowolna ilość znaków)
+#SELECT * FROM pytania WHERE tresc LIKE '%C++%' OR odpa LIKE '%C++%' OR odpb LIKE '%C++%' OR odpc LIKE '%C++%' OR odpd LIKE '%C++%'# wyb. all z tab. pyt. gdzie w jakiejkolwiek kolumnie jest fraca 'C++'
+SELECT * FROM pytania WHERE (kategoria = 'programowanie' OR kategoria = 'systemy operacyjne i sieci') AND rok = 2012 # wyb. all z tab. pyt. gdzie kategoria to programowanie lub systemy operacyjne i sieci komputerowe, i rok to 2012 (tylko z tego roku)
