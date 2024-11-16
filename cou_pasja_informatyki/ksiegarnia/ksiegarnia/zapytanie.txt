@@ -1,0 +1,7 @@
+#SELECT * FROM ksiazki # wyb. all z tab. ksiazki (wyswietli tylko z tej tab.)
+#SELECT * FROM ksiazki ORDER BY tytul ASC # wyb. all z tab. ksiazki sort. alfabetycznie
+#SELECT * FROM ksiazki ORDER BY cena DESC LIMIT 1 # wyb. all z tab. ksiazki sort. po cenie malejaco ogranicz wyniki do 1
+#SELECT * FROM zamowienia WHERE status = 'wyslano' # wyb. all z tab. zamowienia gdzie status = wyslano
+#SELECT * FROM klienci WHERE nazwisko = 'Rutkowski' # wyb. all z tab. klienci gdzie nazwosko to Rutkowski
+#SELECT * FROM ksiazki WHERE tytul LIKE '%PHP%' # wyb all z tab. ksiazki gdzie w tytule jest PHP
+#SELECT * FROM zamowienia ORDER BY data DESC # wyb. all z tab. tab. zamowienia sort. malejaco (czyli od najnowszej daty)
