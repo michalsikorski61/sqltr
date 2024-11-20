@@ -1,1 +1,11 @@
-SELECT * from klienci
+#SELECT * from klienci
+#SELECT imie, nazwisko FROM klienci
+#SELECT * FROM auta WHERE rocznik=2010
+#SELECT * FROM auta WHERE marka='Ford'
+#SELECT * FROM auta WHERE idauta BETWEEN 2 AND 4
+#SELECT imie, nazwisko,adres FROM klienci WHERE miasto="Katowice" AND adres LIKE "%Rolna%"
+#SELECT marka,model FROM auta ORDER BY ubezpieczenie DESC LIMIT 1
+#SELECT auta.idauta, auta.marka, auta.model, wypozyczenia.datawyp FROM auta, wypozyczenia WHERE auta.idauta = wypozyczenia.idauta ORDER BY datawyp ASC LIMIT 1
+#SELECT klienci.idklienta,klienci.imie, klienci.nazwisko, wypozyczenia.idauta FROM klienci, wypozyczenia WHERE idauta = 1 AND klienci.idklienta = wypozyczenia.idklienta
+#SELECT auta.idauta,auta.marka, auta.model FROM auta, wypozyczenia WHERE idklienta = 4 AND auta.idauta = wypozyczenia.idauta
+SELECT auta.idauta,auta.marka, auta.model, klienci.nazwisko FROM auta, klienci, wypozyczenia WHERE klienci.nazwisko = "Pastewniak" AND auta.idauta = wypozyczenia.idauta AND klienci.idklienta = wypozyczenia.idklienta
