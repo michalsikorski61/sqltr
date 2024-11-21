@@ -1,11 +1,5 @@
-#SELECT * FROM ksiazki # wyb. all z tab. ksiazki (wyswietli tylko z tej tab.)
-#SELECT * FROM ksiazki ORDER BY tytul ASC # wyb. all z tab. ksiazki sort. alfabetycznie
-#SELECT * FROM ksiazki ORDER BY cena DESC LIMIT 1 # wyb. all z tab. ksiazki sort. po cenie malejaco ogranicz wyniki do 1
-#SELECT * FROM zamowienia WHERE status = 'wyslano' # wyb. all z tab. zamowienia gdzie status = wyslano
-#SELECT * FROM klienci WHERE nazwisko = 'Rutkowski' # wyb. all z tab. klienci gdzie nazwosko to Rutkowski
-#SELECT * FROM ksiazki WHERE tytul LIKE '%PHP%' # wyb all z tab. ksiazki gdzie w tytule jest PHP
-#SELECT * FROM zamowienia ORDER BY data DESC # wyb. all z tab. tab. zamowienia sort. malejaco (czyli od najnowszej daty)
-#SELECT klienci.imie, klienci.nazwisko, zamowienia.idzamowienia, zamowienia.data FROM klienci, zamowienia WHERE klienci.idklienta = zamowienia.idklienta # wyb. wymienione z tab. klienci i zamowienia tam gdzie idklt w zamowieniach jest rowne idklt w klientach
-#SELECT klt.imie, klt.nazwisko,zam.idksiazki,zam.data FROM klienci AS klt, zamowienia AS zam WHERE zam.idksiazki = 2 AND zam.idklienta = klt.idklienta # wyb. wymienione z tab. klienci i zamowienia tam gdzie zam.idksiazki = 2 i wystepuje relacja zam.idklienta = klt.idklienta
-#SELECT ksiazki.tytul, ksiazki.imieautora, ksiazki.nazwiskoautora, ksiazki.tytul, zamowienia.data FROM ksiazki,zamowienia WHERE zamowienia.idklienta = 2 AND zamowienia.idksiazki = ksiazki.idksiazki # wyb. wymienione z tab. ksiazki i zamowienia tam gdzie zamowienia.idklienta = 2 i wystepuje ralacja zamowienia.idksiazki = ksiazki.idksiazki
-SELECT klienci.imie, klienci.nazwisko, zamowienia.idzamowienia, zamowienia.data, zamowienia.status, ksiazki.tytul FROM ksiazki,zamowienia,klienci WHERE klienci.nazwisko = "Rutkowski" AND zamowienia.idklienta = klienci.idklienta AND zamowienia.idksiazki = ksiazki.idksiazki ORDER BY zamowienia.data DESC # wyb. wymi. z tab. wymien. tam gdzie klienci.nazwisko = "Rutkowski" i wystepuje relacja zamowienia.idklienta = klienci.idklienta AND zamowienia.idksiazki = ksiazki.idksiazki i posortuj po dacie malająco
+#UPDATE klienci SET nazwisko='Psikuta' WHERE nazwisko='Jankowska' # in klt tab. set naziwsko = Psikuta where nazwisko = Jankowska beter identify by id 
+#UPDATE ksiazki SET cena = ROUND(cena*1.1, 2) # update in tab. ksiazki set cena + 10% ceny
+#UPDATE ksiazki SET cena = cena - 10 ORDER BY cena DESC LIMIT 1 WHERE idksiazki = 3  # in tab. ksiazki set cena - 10 where cena is the highest
+#UPDATE klienci SET imie='Joanna' , nazwisko='Dostojewska' WHERE idklienta=10 # in tab. klt set imie = Joanna , nazwisko = Dostojewska where idklt = 10
+#UPDATE zamowienia SET status='wyslano' WHERE idzamowienia BETWEEN 4 AND 5 # in tab. zamowienia set status to wyslano in rows between 4 and 5 id
