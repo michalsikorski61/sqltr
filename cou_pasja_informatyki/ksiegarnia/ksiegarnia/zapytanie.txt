@@ -3,3 +3,8 @@
 #UPDATE ksiazki SET cena = cena - 10 ORDER BY cena DESC LIMIT 1 WHERE idksiazki = 3  # in tab. ksiazki set cena - 10 where cena is the highest
 #UPDATE klienci SET imie='Joanna' , nazwisko='Dostojewska' WHERE idklienta=10 # in tab. klt set imie = Joanna , nazwisko = Dostojewska where idklt = 10
 #UPDATE zamowienia SET status='wyslano' WHERE idzamowienia BETWEEN 4 AND 5 # in tab. zamowienia set status to wyslano in rows between 4 and 5 id
+#INSERT INTO klienci VALUES (null, 'Franciszek','Janowski','Chorzów') # in tab. klt add Franciszek Janowski Chorzow
+#INSERT INTO zamowienia (idzamowienia,data,status,idksiazki,idklienta) VALUES (NULL,2024-01-01,'oczekiwanie',3,7) # in tab. klt add new row in this data (custom order)
+#SELECT * FROM klienci, zamowienia, ksiazki WHERE zamowienia.idzamowienia=11 AND zamowienia.idksiazki = ksiazki.idksiazki AND zamowienia.idklienta = klienci.idklienta
+#INSERT INTO ksiazki (idksiazki,nazwiskoautora,tytul) VALUES (null,'Grębosz','Symfonia C++') # in tab. ksiazki add new row with only this columns
+#INSERT INTO klienci VALUES (NULL,"Marlyn" ,"Monroe", 'Los Angeles'),(NULL,'Josh', 'Wane', 'Los Angeles') # in tab. klt add 2 rows
