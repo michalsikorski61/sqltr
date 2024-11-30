@@ -1,10 +1,7 @@
-#UPDATE klienci SET nazwisko='Psikuta' WHERE nazwisko='Jankowska' # in klt tab. set naziwsko = Psikuta where nazwisko = Jankowska beter identify by id 
-#UPDATE ksiazki SET cena = ROUND(cena*1.1, 2) # update in tab. ksiazki set cena + 10% ceny
-#UPDATE ksiazki SET cena = cena - 10 ORDER BY cena DESC LIMIT 1 WHERE idksiazki = 3  # in tab. ksiazki set cena - 10 where cena is the highest
-#UPDATE klienci SET imie='Joanna' , nazwisko='Dostojewska' WHERE idklienta=10 # in tab. klt set imie = Joanna , nazwisko = Dostojewska where idklt = 10
-#UPDATE zamowienia SET status='wyslano' WHERE idzamowienia BETWEEN 4 AND 5 # in tab. zamowienia set status to wyslano in rows between 4 and 5 id
-#INSERT INTO klienci VALUES (null, 'Franciszek','Janowski','Chorzów') # in tab. klt add Franciszek Janowski Chorzow
-#INSERT INTO zamowienia (idzamowienia,data,status,idksiazki,idklienta) VALUES (NULL,2024-01-01,'oczekiwanie',3,7) # in tab. klt add new row in this data (custom order)
-#SELECT * FROM klienci, zamowienia, ksiazki WHERE zamowienia.idzamowienia=11 AND zamowienia.idksiazki = ksiazki.idksiazki AND zamowienia.idklienta = klienci.idklienta
-#INSERT INTO ksiazki (idksiazki,nazwiskoautora,tytul) VALUES (null,'Grębosz','Symfonia C++') # in tab. ksiazki add new row with only this columns
-#INSERT INTO klienci VALUES (NULL,"Marlyn" ,"Monroe", 'Los Angeles'),(NULL,'Josh', 'Wane', 'Los Angeles') # in tab. klt add 2 rows
+#DROP DATABASE ksiegarnia # delete entire db ksiegarnia
+#UPDATE zamowienia SET status='Anulowano' WHERE idzamowienia = 2 # set status='Anulowano' where id= 2 in zamowienia
+#DELETE FROM zamowienia WHERE idzamowienia = 2 # delete second row in zamowienia
+#TRUNCATE zamowienia # delete all rows in zamowienia
+#DELETE FROM zamowienia # delete all rows in zamowienia but slower than TRUNCATE
+#DELETE FROM klienci ORDER BY idklienta DESC LIMIT 2 # delete last 2 clients
+DROP TABLE IF EXISTS klienci # drop table klienci if EXISTS
