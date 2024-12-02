@@ -1,0 +1,2 @@
+SELECT Continent, COUNT(Code) AS IlePanstw FROM country GROUP BY Continent #number of countries in continent - group by continent and in every continent count countries (and maybe order by IlePanstw)
+SELECT Continent, COUNT(Code) AS IlePanstw FROM country GROUP BY Continent ORDER BY IlePanstw DESC #the same but with order by 
